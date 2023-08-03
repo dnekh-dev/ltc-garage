@@ -3,24 +3,31 @@ package dnekh.pp.carstore.employee.staff;
 import dnekh.pp.carstore.Person;
 import dnekh.pp.carstore.employee.Position;
 
-public class Manager extends Person {
+public class Employee extends Person {
 
     private Position position;
     private double salary;
     private double bonus;
 
-    public Manager(String firstName, String lastName, int age, String phoneNumber, String email, double salary) {
+    public Employee(String firstName, String lastName, int age, String phoneNumber, String email) {
         super(firstName, lastName, age, phoneNumber, email);
-        this.salary = salary;
     }
-
 
     @Override
     public String toString() {
-        return "Manager{" +
+        return "Employee{" +
                 "position=" + position +
+                ", salary=" + salary +
                 ", bonus=" + bonus +
                 '}';
+    }
+
+    public Position getPosition() {
+        return position;
+    }
+
+    public void setPosition(Position position) {
+        this.position = position;
     }
 
     public double getSalary() {
@@ -29,14 +36,6 @@ public class Manager extends Person {
 
     public void setSalary(double salary) {
         this.salary = salary;
-    }
-
-    public Position getPosition() {
-        return position;
-    }
-
-    public void setPosition(Position position) {
-        this.position = Position.MANAGER;
     }
 
     public double getBonus() {

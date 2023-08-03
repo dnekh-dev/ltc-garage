@@ -1,16 +1,32 @@
 package dnekh.pp.carstore.employee.staff;
 
-import dnekh.pp.carstore.employee.Employee;
+import dnekh.pp.carstore.Person;
 import dnekh.pp.carstore.employee.Position;
 
-public class Owner extends Employee {
+public class Owner extends Person {
 
+    private Position position;
     private double benefits;
-    private String phoneNumberOfOwner;
-    private String emailOfOwner;
 
-    public Owner(String firstName, String lastName, int age, String phoneNumber, Position position, double salary) {
-        super(firstName, lastName, age, phoneNumber, Position.OWNER, salary);
+    public Owner(String firstName, String lastName, int age, String phoneNumber, String email, double benefits) {
+        super(firstName, lastName, age, phoneNumber, email);
+        this.benefits = benefits;
+    }
+
+    @Override
+    public String toString() {
+        return "Owner{" +
+                "position=" + position +
+                ", benefits=" + benefits +
+                '}';
+    }
+
+    public Position getPosition() {
+        return position;
+    }
+
+    public void setPosition(Position position) {
+        this.position = Position.OWNER;
     }
 
     public double getBenefits() {
@@ -19,21 +35,5 @@ public class Owner extends Employee {
 
     public void setBenefits(double benefits) {
         this.benefits = benefits;
-    }
-
-    public String getPhoneNumberOfOwner() {
-        return phoneNumberOfOwner;
-    }
-
-    public void setPhoneNumberOfOwner(String phoneNumberOfOwner) {
-        this.phoneNumberOfOwner = phoneNumberOfOwner;
-    }
-
-    public String getEmailOfOwner() {
-        return emailOfOwner;
-    }
-
-    public void setEmailOfOwner(String emailOfOwner) {
-        this.emailOfOwner = emailOfOwner;
     }
 }

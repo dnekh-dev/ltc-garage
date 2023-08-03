@@ -1,21 +1,30 @@
-package dnekh.pp.carstore.employee;
+package dnekh.pp.carstore;
 
-public abstract class Employee {
+public abstract class Person {
 
     private String firstName;
     private String lastName;
     private int age;
     private String phoneNumber;
-    private Position position;
-    private double salary;
+    private String email;
 
-    public Employee(String firstName, String lastName, int age, String phoneNumber, Position position, double salary) {
+    public Person(String firstName, String lastName, int age, String phoneNumber, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.phoneNumber = phoneNumber;
-        this.position = position;
-        this.salary = salary;
+        this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 
     public String getFirstName() {
@@ -50,19 +59,11 @@ public abstract class Employee {
         this.phoneNumber = phoneNumber;
     }
 
-    public Position getPosition() {
-        return position;
+    public String getEmail() {
+        return email;
     }
 
-    public void setPosition(Position position) {
-        this.position = position;
-    }
-
-    public double getSalary() {
-        return salary;
-    }
-
-    public void setSalary(double salary) {
-        this.salary = salary;
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
