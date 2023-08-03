@@ -4,49 +4,49 @@ public enum CarStore {
 
     INSTANCE;
 
-    private String name;
-    private String nameOfOwner;
-    private String email;
-    private String phoneNumber;
-    private String address;
+    private String nameOfTheStore;
+    private String fullNameOfOwner;
+    private String emailOfTheStore;
+    private String phoneNumberOfTheStore;
+    private String addressOfTheStore;
 
     public String getName() {
-        return name;
+        return nameOfTheStore;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.nameOfTheStore = name;
     }
 
     public String getNameOfOwner() {
-        return nameOfOwner;
+        return fullNameOfOwner;
     }
 
     public void setNameOfOwner(String nameOfOwner) {
-        this.nameOfOwner = nameOfOwner;
+        this.fullNameOfOwner = nameOfOwner;
     }
 
     public String getEmail() {
-        return email;
+        return emailOfTheStore;
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        this.emailOfTheStore = email;
     }
 
     public String getPhoneNumber() {
-        return phoneNumber;
+        return phoneNumberOfTheStore;
     }
 
     public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+        this.phoneNumberOfTheStore = phoneNumber;
     }
 
     public String getAddress() {
-        return address;
+        return addressOfTheStore;
     }
 
     public void setAddress(String address) {
-        this.address = address;
+        this.addressOfTheStore = address;
     }
 }
