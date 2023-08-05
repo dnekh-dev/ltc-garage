@@ -6,9 +6,10 @@ public class Customer extends Person {
 
     private String modelOfCarBought;
 
-    public Customer(String firstName, String lastName, int age, String phoneNumber, String email) {
-        super(firstName, lastName, age, phoneNumber, email);
+    public Customer(int id, String firstName, String lastName, int age, String phoneNumber, String email) {
+        super(id, firstName, lastName, age, phoneNumber, email);
     }
+
 
     @Override
     public String toString() {

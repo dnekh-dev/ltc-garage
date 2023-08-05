@@ -2,6 +2,7 @@ package dnekh.pp.carstore.carmodel;
 
 public abstract class Vehicle {
 
+    private String id;
     private String carClass;
     private String carManufacturer;
     private String carModel;
@@ -31,6 +32,14 @@ public abstract class Vehicle {
                 ", isUsed=" + isUsed +
                 ", carPrice=" + carPrice +
                 '}';
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getCarClass() {
