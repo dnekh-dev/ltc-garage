@@ -1,6 +1,4 @@
-package dnekh.pp.carstore;
-
-import dnekh.pp.carstore.employee.Position;
+package dnekh.pp.carstore.bluprintclasses;
 
 public abstract class Person {
 

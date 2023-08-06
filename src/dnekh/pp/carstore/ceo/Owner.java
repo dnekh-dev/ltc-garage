@@ -1,6 +1,6 @@
 package dnekh.pp.carstore.ceo;
 
-import dnekh.pp.carstore.Person;
+import dnekh.pp.carstore.bluprintclasses.Person;
 
 
 public class Owner extends Person{

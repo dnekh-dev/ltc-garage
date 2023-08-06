@@ -1,8 +1,9 @@
-package dnekh.pp.carstore;
+package dnekh.pp.carstore.bluprintclasses;
 
+import dnekh.pp.carstore.bluprintclasses.Person;
 import dnekh.pp.carstore.employee.Position;
 
-public abstract class Staff extends Person{
+public abstract class Staff extends Person {
 
     private Position position;
     private double salary;
@@ -12,6 +13,7 @@ public abstract class Staff extends Person{
         super(id, firstName, lastName, age, phoneNumber, email);
         this.salary = salary;
     }
+
 
     @Override
     public String toString() {

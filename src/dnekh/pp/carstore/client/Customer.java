@@ -1,6 +1,6 @@
 package dnekh.pp.carstore.client;
 
-import dnekh.pp.carstore.Person;
+import dnekh.pp.carstore.bluprintclasses.Person;
 
 public class Customer extends Person {
 

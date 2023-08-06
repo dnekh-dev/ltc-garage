@@ -1,8 +1,6 @@
 package dnekh.pp.carstore.employee.staff;
 
-import dnekh.pp.carstore.Person;
-import dnekh.pp.carstore.Staff;
-import dnekh.pp.carstore.employee.Position;
+import dnekh.pp.carstore.bluprintclasses.Staff;
 
 public class Manager extends Staff {
 

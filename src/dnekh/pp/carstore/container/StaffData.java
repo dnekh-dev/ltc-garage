@@ -1,20 +1,17 @@
 package dnekh.pp.carstore.container;
 
-import dnekh.pp.carstore.Staff;
-import dnekh.pp.carstore.employee.staff.Employee;
+import dnekh.pp.carstore.bluprintclasses.Staff;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class StaffData {
 
-    private Map<Integer, Staff> staffData;
+    private Map<Integer, Staff> staffData = new HashMap<>();
 
-    public StaffData(Map<Integer, Staff> staffData) {
-        this.staffData = staffData;
-    }
 
-    public void addEmployee(Employee employee) {
-        staffData.put(employee.getId(), employee);
+    public void addStaff(Staff staff) {
+        staffData.put(staff.getId(), staff);
     }
 
     public Staff getStaff(int id) {

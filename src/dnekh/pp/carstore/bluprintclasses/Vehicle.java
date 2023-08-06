@@ -1,4 +1,4 @@
-package dnekh.pp.carstore.carmodel;
+package dnekh.pp.carstore.bluprintclasses;
 
 public abstract class Vehicle {
 
@@ -11,7 +11,8 @@ public abstract class Vehicle {
     private boolean isUsed;
     private int carPrice;
 
-    public Vehicle(String carClass, String carManufacturer, String carModel, int yearOfCarManufacturer, String color, boolean isUsed, int carPrice) {
+    public Vehicle(String id, String carClass, String carManufacturer, String carModel, int yearOfCarManufacturer, String color, boolean isUsed, int carPrice) {
+        this.id = id;
         this.carClass = carClass;
         this.carManufacturer = carManufacturer;
         this.carModel = carModel;

@@ -1,6 +1,6 @@
 package dnekh.pp.carstore.container;
 
-import dnekh.pp.carstore.carmodel.Vehicle;
+import dnekh.pp.carstore.bluprintclasses.Vehicle;
 
 import java.util.Map;
 
