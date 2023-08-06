@@ -6,16 +6,16 @@ public class Customer extends Person {
 
     private String modelOfCarBought;
 
-    public Customer(int id, String firstName, String lastName, int age, String phoneNumber, String email) {
+    public Customer(String id, String firstName, String lastName, int age, String phoneNumber, String email) {
         super(id, firstName, lastName, age, phoneNumber, email);
     }
 
 
     @Override
     public String toString() {
-        return "Customer{" +
-                "modelOfCarBought='" + modelOfCarBought + '\'' +
-                '}';
+        return super.toString() + String.format("""
+                Bought the car - %s
+                """, modelOfCarBought);
     }
 
     public String getModelOfCarBought() {

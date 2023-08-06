@@ -9,7 +9,7 @@ public abstract class Staff extends Person {
     private double salary;
     private double bonus;
 
-    public Staff(int id, String firstName, String lastName, int age, String phoneNumber, String email, double salary) {
+    public Staff(String id, String firstName, String lastName, int age, String phoneNumber, String email, double salary) {
         super(id, firstName, lastName, age, phoneNumber, email);
         this.salary = salary;
     }
@@ -17,11 +17,11 @@ public abstract class Staff extends Person {
 
     @Override
     public String toString() {
-        return "Staff{" +
-                "position=" + position +
-                ", salary=" + salary +
-                ", bonus=" + bonus +
-                '}';
+        return super.toString() + String.format("""
+                Position - %s
+                Salary - %f
+                Bonus - %f
+                """, position, salary, bonus);
     }
 
     public Position getPosition() {

@@ -1,38 +1,46 @@
 package dnekh.pp.carstore.container;
 
+import dnekh.pp.carstore.IPersonManager;
+import dnekh.pp.carstore.bluprintclasses.Person;
 import dnekh.pp.carstore.bluprintclasses.Staff;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class StaffData {
+public class StaffData implements IPersonManager {
 
-    private Map<Integer, Staff> staffData = new HashMap<>();
+    private Map<String, Staff> staffData = new HashMap<>();
 
 
-    public void addStaff(Staff staff) {
-        staffData.put(staff.getId(), staff);
+    @Override
+    public void addPerson(Person person) {
+        staffData.put(person.getId(), (Staff) person);
     }
 
-    public Staff getStaff(int id) {
-        return staffData.get(id);
+    @Override
+    public Person getPerson(String id) {
+        return null;
     }
 
-    public Staff removeEmployee(int id) {
-        return staffData.remove(id);
+    @Override
+    public void removePerson(String id) {
+
     }
 
-    public void displayAllEmployees() {
+    @Override
+    public void displayAllPersons() {
         for (Staff staff : staffData.values()) {
             System.out.println(staff);
         }
     }
 
-    public Map<Integer, Staff> getStaffData() {
+    //getter and setters block starts here
+
+    public Map<String, Staff> getStaffData() {
         return staffData;
     }
 
-    public void setStaffData(Map<Integer, Staff> staffData) {
+    public void setStaffData(Map<String, Staff> staffData) {
         this.staffData = staffData;
     }
 }

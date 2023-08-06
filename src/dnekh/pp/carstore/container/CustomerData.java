@@ -1,47 +1,46 @@
 package dnekh.pp.carstore.container;
 
+import dnekh.pp.carstore.IPersonManager;
+import dnekh.pp.carstore.bluprintclasses.Person;
 import dnekh.pp.carstore.client.Customer;
 
+import java.util.HashMap;
 import java.util.Map;
 
-public class CustomerData {
+public class CustomerData implements IPersonManager {
 
-    private Map<Integer, Customer> customerData;
+    private Map<String, Customer> customerData = new HashMap<>();
 
-    public CustomerData(Map<Integer, Customer> customerData) {
-        this.customerData = customerData;
+
+    @Override
+    public void addPerson(Person person) {
+        customerData.put(person.getId(), (Customer) person);
     }
 
-    public void addCustomer(Customer customer) {
-        customerData.put(customer.getId(), customer);
-    }
-
-    public Customer getCustomer(int id) {
+    @Override
+    public Person getPerson(String id) {
         return customerData.get(id);
     }
 
-    public Customer removeCustomer(int id) {
-        return customerData.remove(id);
+    @Override
+    public void removePerson(String id) {
+        customerData.remove(id);
     }
 
-    public void displayAllCustomers() {
+    @Override
+    public void displayAllPersons() {
         for (Customer customer : customerData.values()) {
             System.out.println(customer);
         }
     }
 
-    @Override
-    public String toString() {
-        return "CustomerData{" +
-                "customerData=" + customerData +
-                '}';
-    }
+    //getters and setters section
 
-    public Map<Integer, Customer> getCustomerData() {
+    public Map<String, Customer> getCustomerData() {
         return customerData;
     }
 
-    public void setCustomerData(Map<Integer, Customer> customerData) {
+    public void setCustomerData(Map<String, Customer> customerData) {
         this.customerData = customerData;
     }
 }

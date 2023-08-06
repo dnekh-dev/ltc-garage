@@ -1,41 +1,40 @@
 package dnekh.pp.carstore.container;
 
+import dnekh.pp.carstore.ICarStorageManager;
 import dnekh.pp.carstore.bluprintclasses.Vehicle;
 
+import java.util.HashMap;
 import java.util.Map;
 
-public class CarSoldData {
+public class CarSoldData implements ICarStorageManager {
 
-    private Map<String, Vehicle> carSoldData;
+    private Map<String, Vehicle> carSoldData = new HashMap<>();
 
-    public CarSoldData(Map<String, Vehicle> carSoldData) {
-        this.carSoldData = carSoldData;
-    }
 
-    public void addSoldCar(Vehicle vehicle) {
+
+    @Override
+    public void addCar(Vehicle vehicle) {
         carSoldData.put(vehicle.getId(), vehicle);
     }
 
-    public Vehicle getSoldCar(String id) {
+    @Override
+    public Vehicle getCar(String id) {
         return carSoldData.get(id);
     }
 
-    public Vehicle removeSoldCar(String id) {
-        return carSoldData.remove(id);
+    @Override
+    public void removeCar(String id) {
+        carSoldData.remove(id);
     }
 
-    public void displayAllSoldCars() {
+    @Override
+    public void displayAllCars() {
         for (Vehicle vehicle : carSoldData.values()) {
             System.out.println(vehicle);
         }
     }
 
-    @Override
-    public String toString() {
-        return "CarSoldData{" +
-                "carSoldData=" + carSoldData +
-                '}';
-    }
+    //getters and setters section
 
     public Map<String, Vehicle> getCarSoldData() {
         return carSoldData;

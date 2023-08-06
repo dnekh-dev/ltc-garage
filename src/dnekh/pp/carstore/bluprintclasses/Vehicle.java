@@ -9,9 +9,9 @@ public abstract class Vehicle {
     private int yearOfCarManufacturer;
     private String color;
     private boolean isUsed;
-    private int carPrice;
+    private double carPrice;
 
-    public Vehicle(String id, String carClass, String carManufacturer, String carModel, int yearOfCarManufacturer, String color, boolean isUsed, int carPrice) {
+    public Vehicle(String id, String carClass, String carManufacturer, String carModel, int yearOfCarManufacturer, String color, boolean isUsed, double carPrice) {
         this.id = id;
         this.carClass = carClass;
         this.carManufacturer = carManufacturer;
@@ -24,15 +24,16 @@ public abstract class Vehicle {
 
     @Override
     public String toString() {
-        return "Vehicle{" +
-                "carClass='" + carClass + '\'' +
-                ", carManufacturer='" + carManufacturer + '\'' +
-                ", carModel='" + carModel + '\'' +
-                ", yearOfCarManufacturer=" + yearOfCarManufacturer +
-                ", color='" + color + '\'' +
-                ", isUsed=" + isUsed +
-                ", carPrice=" + carPrice +
-                '}';
+        return String.format("""
+                ID - %s
+                Class of car - %s
+                Manufacturer - %s
+                Model - %s
+                Year - %d
+                Color - %s
+                isUsed - %b
+                Price - %f
+                """, id, carClass, carManufacturer, carModel, yearOfCarManufacturer, color, isUsed, carPrice);
     }
 
     public String getId() {
@@ -91,11 +92,11 @@ public abstract class Vehicle {
         isUsed = used;
     }
 
-    public int getCarPrice() {
+    public double getCarPrice() {
         return carPrice;
     }
 
-    public void setCarPrice(int carPrice) {
+    public void setCarPrice(double carPrice) {
         this.carPrice = carPrice;
     }
 }

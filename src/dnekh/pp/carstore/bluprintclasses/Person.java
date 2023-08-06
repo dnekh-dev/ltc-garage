@@ -2,14 +2,14 @@ package dnekh.pp.carstore.bluprintclasses;
 
 public abstract class Person {
 
-    private int id;
+    private String id;
     private String firstName;
     private String lastName;
     private int age;
     private String phone;
     private String email;
 
-    public Person(int id, String firstName, String lastName, int age, String phone, String email) {
+    public Person(String id, String firstName, String lastName, int age, String phone, String email) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -20,21 +20,21 @@ public abstract class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", age=" + age +
-                ", phoneNumber='" + phone + '\'' +
-                ", email='" + email + '\'' +
-                '}';
+        return String.format("""
+                ID - %s
+                Firstname - %s
+                Lastname - %s
+                Age - %d
+                Phone - %s
+                Email - %s
+                """, id, firstName, lastName, age, phone, email);
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

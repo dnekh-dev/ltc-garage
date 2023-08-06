@@ -7,7 +7,7 @@ public class Owner extends Person{
 
     private double benefits;
 
-    public Owner(int id, String firstName, String lastName, int age, String phoneNumber, String email) {
+    public Owner(String id, String firstName, String lastName, int age, String phoneNumber, String email) {
         super(id, firstName, lastName, age, phoneNumber, email);
     }
 
